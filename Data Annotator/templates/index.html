@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+.button {
+  display: inline-block;
+  padding:20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+    margin-top: 25px;
+    font-family:Verdana, sans-serif;
+
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+body {
+      font-family:Verdana, sans-serif;
+    }
+</style>
+</head>
+<body>
+<form method="POST">
+    <h1>Data Annotator</h1>
+    <h3>Please select the new product ideas by click the check boxes</h3>
+    {% for field in form %}
+        <div>
+        <ul>
+            <li>{{ field.label }}: {{ field }}</li>
+        </ul>
+        </div>
+    {% endfor %}
+
+    <button class="button" type="submit">Submit</button>
+</form>
+</body>
+</html>
